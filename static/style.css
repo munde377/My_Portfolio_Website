@@ -146,9 +146,106 @@ box-shadow:0 30px 80px rgba(56,189,248,0.4);
 /* ================= SECTIONS ================= */
 
 .section{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 padding:60px 20px;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:30px;
+color:#f8fafc;
+}
+
+.hero-buttons,
+.resume-buttons,
+.cert-buttons,
+.project-links{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:24px;
+}
+
+.hero-btn,
+.cert-btn,
+.resume-btn,
+.demo-btn{
+background:linear-gradient(135deg,#38bdf8,#6366f1);
+color:white;
+padding:12px 20px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-btn:hover,
+.resume-btn:hover,
+.demo-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 20px rgba(56,189,248,0.25);
+}
+
+.project-links{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.project-details{
+margin-top:16px;
+list-style:none;
+display:grid;
+gap:10px;
+}
+
+.project-details li{
+color:#cbd5e1;
+}
+
+.project-details li strong{
+color:#f8fafc;
+}
+
+
+.edu-header,
+.cert-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:18px;
+}
+
+.edu-header i,
+.cert-header i{
+font-size:26px;
+color:#38bdf8;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(3,minmax(240px,1fr));
+gap:24px;
+}
+
+.contact-card{
+background:rgba(30,41,59,0.6);
+padding:24px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.contact-icon{
+font-size:24px;
+color:#38bdf8;
+margin-bottom:14px;
+}
+
+.contact-card a{
+color:#cbd5e1;
+word-break:break-word;
 }
 
 /* ================= PROJECT CARD ================= */
@@ -214,6 +311,17 @@ resize:none;
 
 /* ================= RESPONSIVE ================= */
 
+@media(max-width:1024px){
+
+.contact-container{
+grid-template-columns:repeat(2,minmax(220px,1fr));
+}
+
+.hero{
+padding:80px 20px;
+}
+}
+
 @media(max-width:768px){
 
 .hero{
@@ -237,6 +345,36 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:40px 18px;
+}
+}
+
+@media(max-width:480px){
+
+.hero-text h1{
+font-size:30px;
+}
+
+nav{
+padding:14px 16px;
+}
+
+.nav-buttons a{
+font-size:13px;
+padding:10px 14px;
+}
+
+.cert-btn,
+.resume-btn,
+.demo-btn{
+width:100%;
+justify-content:center;
+}
 }
 
 /* Fade In */
